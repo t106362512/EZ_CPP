@@ -1,0 +1,51 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+#include "stdafx.h"
+//________________________________________________________________
+void rectangle(int l, int w, int outline)
+{
+	{	
+		cout << "i/p l,w:";
+		cin >> l >> w;
+		for (int k = 1; k <= w;k++)
+		{	
+			for (int g = 1; g <= l; g++){
+				if (g==1||g==l||k==1||k==w||outline==1)
+				cout << "*";
+				else
+				cout << " ";
+			}
+			cout << endl;
+		}
+	}
+}
+void Rectangle()
+{
+	int i,l=0,w=0,outline;
+	do
+	{
+		cout << "實心長方輸入1	" << "長方框架輸入2	" << "end輸入3:";
+		cin >> i;
+		switch (i)
+		{
+		case 0:
+			break;
+		case 1:
+			outline = 1;
+			rectangle(l, w, outline);
+			break;
+		case 2:
+			outline = 0;
+			rectangle(l, w, outline);
+			break;
+		case 3:
+			break;
+		default:
+			cout << "你輸入的數字不再範圍內 \n";
+			system("PAUSE");
+			break;
+		}
+	} while (i != 3);
+	system("PAUSE");
+}

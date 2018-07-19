@@ -1,0 +1,38 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void qArea(int&, int);
+void qVolumn(int&, int);
+
+
+//int main()
+void work6()
+{
+	cout << "6. work6" << endl;
+	cout << endl;
+
+	int Area, Volumn;
+	cout << "¥b®|" << setw(13) << "ªí­±¿n" << setw(13) << "Åé¿n" << endl;
+	for (int l = 5; l <= 10; l++)
+	{
+		qArea(Area, l);
+		qVolumn(Volumn, l);
+		cout << setw(4) << l << setw(13) << Area << setw(13) << Volumn << endl;
+	}
+
+
+	system("PAUSE");
+	//return 0;
+}
+
+void qArea(int& Area, int l)
+{
+	Area = pow(l, 2) * 6;
+}
+
+void qVolumn(int& Volumn, int l)
+{
+	Volumn = pow(l, 3);
+}
+

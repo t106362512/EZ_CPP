@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void ltog()
+{
+	double a;
+	cout << "請輸入要轉換的公升數:";
+	cin >> a;
+	cout << a << "公升 = " << a * 0.264178 << "加侖" << endl;
+	system("PAUSE");
+}
+void gtol()
+{
+	double a;
+	cout << "請輸入要轉換的加侖數:";
+	cin >> a;
+	cout << a << "加侖 = " << a * 3.78533 << "公升" << endl;
+	system("PAUSE");
+}
+void d()
+{
+	int b;
+	cout << "1. 公升轉加侖  2.加侖轉公升  3.結束: ";
+	cin >> b;
+	switch (b)
+	{
+	case 1:
+		ltog();
+		break;
+	case 2:
+		gtol();
+		break;
+	case 3:
+		break;
+	}
+
+}

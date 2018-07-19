@@ -1,0 +1,26 @@
+//A1.cpp
+#include <iostream>
+using namespace std;
+void A3();
+int max=1;
+int n;
+int i;
+void A2()
+{
+	cout << "請輸入一個數字";
+	cin >> n;
+		
+	cout << n << "*" << (n - 1) << "*" << (n - 2) << ("*...*") << "1=";
+	    A3();
+		system("PAUSE");
+		return;
+}
+void A3()
+{
+	for ( i = n; i > 1; i--)
+	{
+		max = max * i;
+
+	}
+	cout << max << endl;
+}

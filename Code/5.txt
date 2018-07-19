@@ -1,0 +1,30 @@
+#include<iomanip>
+#include <iostream>
+using namespace std;
+
+
+double sArea1(double pi, int r)
+{
+	double Area;
+	Area = 4 * pi*r*r*r;
+	return Area;
+}
+
+
+double sVolumn1(double pi, int r)
+{
+	double Volumn;
+	Volumn = pi * r*r*r * 4 / 3;
+	return Volumn;
+}
+
+void wordE()
+{
+	cout << "¥b®| " << "     ªí­±¿n " << "         Åé¿n " << endl;
+	for (int i = 5; i < 11; i++)
+	{
+		cout << setw(2) << i << setw(14) << sArea1(3.14, i) << setw(4) << "         " << sVolumn1(3.14, i) << endl;
+	}
+
+	system("PAUSE");
+}

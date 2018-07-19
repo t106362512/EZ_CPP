@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1524396090 source:c:\users\admin\desktop\_0422_work\_0422_work\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	<iomanip>
+
+1524385533 source:c:\users\admin\desktop\_0422_work\_0422_work\stdafx.h
+	<stdio.h>
+	<stdlib.h>
+	<tchar.h>
+	<iostream>
+	<iomanip>
+
+1524388405 source:c:\users\admin\desktop\_0422_work\_0422_work\_1_convert.cpp
+	<stdlib.h>
+	<iostream>
+	<iomanip>
+
+1524393883 source:c:\users\admin\desktop\_0422_work\_0422_work\_2_ballarea.cpp
+	<stdlib.h>
+	<iomanip>
+	<iostream>
+	<math.h>
+
+1524394047 source:c:\users\admin\desktop\_0422_work\_0422_work\_3_cubearea.cpp
+	<stdlib.h>
+	<iomanip>
+	<iostream>
+
+1524395556 source:c:\users\admin\desktop\_0422_work\_0422_work\_4_rectangle.cpp
+	<stdlib.h>
+	<iomanip>
+	<iostream>
+

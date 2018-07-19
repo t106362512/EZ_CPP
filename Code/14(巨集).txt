@@ -1,0 +1,17 @@
+//w14
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+using namespace std;
+#define Max(z,x,c,v) (   ((((( (z) >= (x) )? (z) :(x) )>=(c)) ?((( (z) >= (x) )? (z) :(x) )) :(c))>=(v)) ?((((( (z) >= (x) )? (z) :(x) )>=(c)) ?((( (z) >= (x) )? (z) :(x) )) :(c))):(v) )
+#define Min(z,x,c,v) (   ((((( (z) <= (x) )? (z) :(x) )<=(c)) ?((( (z) <= (x) )? (z) :(x) )) :(c))<=(v)) ?((((( (z) <= (x) )? (z) :(x) )<=(c)) ?((( (z) <= (x) )? (z) :(x) )) :(c))):(v) )
+void w14_2() {
+	cout << "請輸入4個整數(以空白隔開) : ";
+	int z = 0, x = 0, c = 0, v = 0;
+	cin >> z >> x >> c >> v;
+	cout << endl;
+	cout << "MAX= " << Max(z, x, c,v) << endl;
+	cout << "MIN= " << Min(z , x , c, v) << endl;
+
+	system("PAUSE");
+}

@@ -1,0 +1,288 @@
+main
+
+//----------------------------------------------------------------
+
+// work3.cpp: 定義主控台應用程式的進入點。
+//
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+using namespace std;
+extern void w1();
+extern void w2();
+extern void w3();
+extern void w4();
+extern void w5();
+
+int main()
+{
+	int input;
+	do
+	{
+		system("CLS");
+		cout << "w1輸入1 \n";
+		cout << "w2輸入2 \n";
+		cout << "w3輸入3 \n";
+		cout << "w4輸入4 \n";
+		cout << "w5輸入5 \n";
+		cout << " \n";
+		cout << "--------------------------------\n";
+		cout << "請輸入要執行的c++程式,輸入'0'結束執行 \n";		//螢幕輸出	使用物件	std		=> std::cont
+
+		cin >> input;
+		while (getchar() != '\n');
+		switch (input)
+		{
+		case 0:
+			break;
+		case 1:
+			w1();
+			break;
+		case 2:
+			w2();
+			break;
+		case 3:
+			w3();
+			break;
+		case 4:
+			w4();
+			break;
+		case 5:
+			w5();
+			break;
+
+		default:
+			cout << "你輸入的數字不再範圍內 \n";
+			system("PAUSE");
+			break;
+		}
+	} while (input != 0);
+	return EXIT_SUCCESS;
+
+}
+
+
+
+
+//w1
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+using namespace std;
+void w1() {
+	double L,G ;
+	int c;
+	double ltog(double l);
+	double gtol(double g);
+	cout << "1.公升轉加侖  2.加侖轉公升  3. 結束 ";
+	cin >> c;
+	switch (c)
+	{
+	case 1:
+		cout << "請輸入公升 L: ";
+		cin >> L;
+		cout << endl;
+		cout << L << "公升 轉換成加侖= " << ltog(L) << endl;
+		break;
+	case 2:
+		cout << "請輸入加侖 G: ";
+		cin >> G;
+		cout << endl;
+		cout << G << " 加侖轉換成公升= " << gtol(G) << endl;
+		break;
+	case 3:
+		cout << "程式結束" << endl;
+		break;
+	default:
+		cout << "輸入錯誤" << endl;
+		break;
+	}
+	system("PAUSE");
+}
+double gtol(double g) {
+	double l;
+	l = g * 3.78533;
+	return l;
+}
+double ltog(double l) {
+	double g;
+	g = l * 0.264178;
+	return g;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//w2
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+double PI=3.1415926;
+using namespace std;
+double sArea(double pi, double r);
+double sVolumn(double pi, double r);
+void w2() {
+
+	cout << "半徑"<<"     " << setw(7) << "表面積" <<"     "<< setw(5)<< "體積"<<endl;
+
+	for (int i = 5; i <= 10; i++) {
+		cout << setw(2)<<i << "     " <<setw(7)<< sArea(PI,i) << "     " << setw(7) << sVolumn(PI, i) << endl;
+		}
+	system("PAUSE");
+}
+double sArea(double pi,double r) {
+	double A;
+	A = pi * 4 * pow(r,2);
+	return A;
+}
+double sVolumn(double pi, double r) {
+	double A;
+	A = pi* pow(r, 3)*4/3;
+	return A;
+}
+
+
+
+//w3
+
+
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+using namespace std;
+double qArea( double l);
+double qVolumn( double l);
+
+void w3() {
+	cout << "邊長" << "     " << setw(7) << "表面積" << "     " << setw(5) << "體積" << endl;
+	for (int i = 5; i <= 10; i++) {
+		cout << setw(2) << i << "     " << setw(7) << qArea( i) << "     " << setw(7) << qVolumn(i) << endl;
+	}
+	system("PAUSE");
+}
+
+double qArea(double l) {
+	double A;
+	A = pow(l, 2)*6;
+	return A;
+}
+double qVolumn(double l) {
+	double A;
+	A = pow(l, 3);
+	return A;
+}
+
+//w4
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+using namespace std;
+void qArea(int,int,int);
+void w4() {
+	int c ,L , W;
+	cout << "1. 實心長方形  2.長方形外框   3.結束 : ";
+	cin >> c;
+	cout << endl;
+	cout << "請輸入兩個整數 L , W : ";
+	cin >> L >> W;
+	cout << endl;
+	switch (c)
+	{
+	case 1:
+		qArea(L,W,1);
+		break;
+	case 2:
+		qArea(L, W, 0);
+		break;
+	case 3:
+		cout << "程式結束" << endl;
+		break;
+	default:
+		cout << "輸入錯誤" << endl;
+		break;
+	}
+
+	system("PAUSE");
+}
+void qArea(int l,int w,int outline) {
+	if (outline == 1) {
+		for (int i = 1; i <= w; i++) {
+			for (int x = 1; x <= l; x++) {
+				cout << "*";
+			}
+			cout << endl;
+		}
+	}
+	else {
+		for (int i = 1; i <= l; i++) { cout << "*"; }
+		cout << endl;
+		for (int i = 1; i <= w - 2; i++) {
+			//------------------------------------
+			if (l - 2 < 0&&l!=0) {
+				cout << "*" << endl;
+			}
+			else if (l - 2 ==0) { cout << "**" << endl; }
+			else
+			{
+			for (int x = 1; x <= l - 2; x++) {
+				cout << "*" << setw(l - 2) << " " << "*";
+			}
+			cout << endl;
+			}
+		}
+		//----------------------------------------------
+		for (int i = 1; i <= l; i++) { cout << "*"; }
+		cout << endl;
+		
+	}
+
+}
+
+
+//w5
+#include "stdafx.h"
+#include<iostream>
+#include <iomanip>
+#include <windows.h>
+using namespace std;
+void showtime(int&,int&,int&);
+int S, M, H;
+void w5() {
+
+	cout << "請輸入現在時刻(HH MM SS): ";
+	cin >> H >> M >> S;
+	cout << endl << "現在時刻 " << setfill('0') << setw(2) << H << " : " << setfill('0') << setw(2) << M << " : " << setfill('0') << setw(2) << S ;
+	while (true) {
+		showtime(H, M, S);
+	}
+
+	system("PAUSE");
+}
+void showtime(int& H, int& M, int& S) {
+	
+	if (S == 60) { S = 0; M++; }
+	if (M == 60) { M = 0; H++; }
+	if (H == 24) { S = 0; M = 0; H = 0; }
+
+	cout <<"\r" << "現在時刻 " << setfill('0') << setw(2) << H << " : " << setfill('0') << setw(2) << M << " : " << setfill('0') << setw(2) << S ;
+	Sleep(1000);
+	S++;
+
+	
+}
+
+
+
+
+
+

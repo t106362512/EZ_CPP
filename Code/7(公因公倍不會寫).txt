@@ -1,0 +1,74 @@
+#include <iostream>
+using namespace std;
+
+void GCD()
+{
+	double a,b,c;
+	cout << "請輸入二個整數(a,b):";
+	cin >> a >> b;
+	cout << endl;
+
+	c = a*b ;
+	cout << "GCD" << c << endl;
+}
+
+
+void LCM()
+{
+	double i, j, k;
+	cout << "請輸入二個整數(a,b):";
+	cin >> j >> i;
+	cout << endl;
+
+	k = i * j;
+	cout << "LCM" << k << endl;
+}
+
+void wordg()
+{
+	int x;
+	cout << "1.GCD 2.LCM 3.結束:";
+	cin >> x;
+	cout << endl;
+
+	switch (x)
+	{
+	case 1:
+		GCD();
+		break;
+
+	case 2:
+		LCM();
+		break;
+
+	case 3:
+		break;
+	}
+
+	system("PAUSE");
+	//return 0;
+
+}
+
+
+/*
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void) {
+    int n; 
+
+    printf("請輸入整數："); 
+    scanf("%d", &n); 
+    printf("%d = ", n); 
+
+    int i;
+    for(i = 2; i * i <= n;) if(n % i == 0) { 
+        printf("%d * ", i); 
+        n /= i; 
+    } else { i++; }
+
+    return 0; 
+} 
+*/
+

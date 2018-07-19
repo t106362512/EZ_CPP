@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+void itog1();
+void gtol1();
+
+//int main()
+void work1()
+{
+	cout << "1. work1" << endl;
+	cout << endl;
+
+	int x;
+	cout << "1.英吋轉公分 2.公分轉英吋 3.結束:";
+	cin >> x;
+
+	switch (x)
+	{
+	case 1:
+		itog1();
+		break;
+
+	case 2:
+		gtol1();
+		break;
+
+	case 3:
+		break;
+
+	default:
+		cout << "您輸入的數字不在選項內" << endl;
+		break;
+	}
+
+	system("PAUSE");
+	//return 0;
+}
+
+void itog1()
+{
+	double a, c;
+	cout << "請輸入要轉換的英吋數，輸入0則結束:";
+	cin >> a;
+	if (!a == 0)
+	{
+		c = a * 2.54;
+		cout << a << "英尺=" << c << "公分" << endl;
+	}
+}
+
+
+void gtol1()
+{
+	double b, d;
+	cout << "請輸入要轉換的公分，輸入0則結束:";
+	cin >> b;
+	if (!b == 0)
+	{
+		d = b * 0.3937;
+		cout << b << "公分=" << d << "英吋" << endl;
+	}
+}

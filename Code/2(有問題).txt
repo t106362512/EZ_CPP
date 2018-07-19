@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+void ftom()
+{
+	double a,z,y;
+	int c;
+	cout << "請輸入要轉換的英尺數:" ;
+	cin >> a;
+	cout << endl;
+	c = a * 0.3048;
+
+	cout << "請輸入要轉換的英吋數:" ;
+	cin >> z;
+	cout << endl;
+	y = z * 2.54;
+
+	cout << a << "英尺"<< z << "英吋=" << c <<"公尺" << y << "公分" << endl;
+}
+
+
+void mtof()
+{
+	double b,i,j;
+	int d;
+	cout << "請輸入要轉換的公尺數:" ;
+	cin >> b;
+	cout << endl;
+	d = b * 3.28083;
+
+	cout << "請輸入要轉換的公分數:";
+	cin >> i;
+	cout << endl;
+	j = i * 0.3937;
+
+	cout << b << "公尺" << i << "公分=" << d << "英尺" << j << "英吋" << endl;
+}
+
+void wordB()
+{
+	int x;
+	cout << "1.英制轉公制 2.公制轉英制 3.結束:" << endl;
+	cin >> x;
+
+	switch (x)
+	{
+	case 1:
+		ftom();
+		break;
+
+	case 2:
+		mtof();
+		break;
+
+	case 3:
+		break;
+	}
+
+	system("PAUSE");
+	//return 0;
+
+}
+

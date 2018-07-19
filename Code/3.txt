@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void m2tof2()
+{
+	double a;
+	cout << "請輸入要轉換的平方公尺數:";
+	cin >> a;
+	cout << a << "平方公尺 = " << a * 10.76 << "平方呎" << endl;
+	system("PAUSE");
+}
+void f2tom2()
+{
+	double a;
+	cout << "請輸入要轉換的平方呎數:";
+	cin >> a;
+	cout << a << "平方呎數 = " << a * 0.0929 << "平方公尺" << endl;
+	system("PAUSE");
+}
+void c()
+{
+	int b;
+	cout << "1. 平方公尺轉平方呎  2.平方呎轉平方公尺  3.結束: ";
+	cin >> b;
+	switch (b)
+	{
+	case 1:
+		m2tof2();
+		break;
+	case 2:
+		f2tom2();
+		break;
+	case 3:
+		break;
+	}
+
+}

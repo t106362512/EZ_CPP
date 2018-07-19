@@ -1,0 +1,31 @@
+#include "stdafx.h"
+
+#include <stdio.h>
+#include <time.h>
+using namespace std;
+
+void showtime(int h, int m, int s)
+{
+	cout << setfill('0');
+	if (h/12 > 0)
+		cout << setw(2) << h%12 << ":" << setw(2)  << m << ":" << setw(2)  << s << "\tPM" << endl;
+	else
+		cout << setw(2) << h << ":" << setw(2) << m << ":" << setw(2) << s << "\tAM"  << endl;
+	cout << setfill(' ');
+}
+
+void _10_Time2()
+{
+	int h, m, s;
+	time_t t = time(0);
+	struct tm now_time;
+	localtime_s(&now_time,&t);
+	cout << "請輸入目前時間(hh mm ss): ";
+	cin >> h >> m >> s;
+
+	showtime(h, m, s);
+	cout << "電腦目前時間" << endl;
+	showtime(now_time.tm_hour, now_time.tm_min, now_time.tm_sec);
+
+	system("PAUSE");
+}
